@@ -2,6 +2,7 @@ package com.yummmy.webapp.entity;
 
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
@@ -9,6 +10,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @EnableJpaRepositories
 
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity

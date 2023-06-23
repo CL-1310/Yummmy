@@ -22,7 +22,7 @@ public class OrderController {
 
     //    OBTENIR TOUTES LES COMMANDES
 
-    @GetMapping("/orderes")
+    @GetMapping("/orders")
     public List<Order> findAllOrders(){
         return service.getOrders();
     }

@@ -13,13 +13,6 @@ public class UserController {
     @Autowired
     private UserService service;
 
-    //    AJOUTER UN UTILISATEUR
-
-    @PostMapping("/addUser")
-    public User addUser(@RequestBody User user){
-        return service.saveUser(user);
-    }
-
     //    OBTENIR UN UTILISATEUR PAR SON ID
 
     @GetMapping("/user/{id}")
@@ -33,7 +26,6 @@ public class UserController {
     public User findUserByName(@PathVariable String name) {
         return service.getUserByName(name);
     }
-
 
     //    METTRE A JOUR UN UTILISATEUR
 
@@ -50,33 +42,14 @@ public class UserController {
     }
 
     @GetMapping("/register")
-    public String getRegisterPage(Model model){
-        model.addAttribute("registerRequest", new User());
+    public String getRegisterPage(){
         return "register_page";
     }
 
     @GetMapping("/login")
-    public String getLoginPage(Model model){
-        model.addAttribute("loginRequest", new User());
+    public String getLoginPage(){
         return "login_page";
     }
-
-    @PostMapping("/register")
-    public String register(@ModelAttribute User user){
-        System.out.println("register request:" + user);
-        User registeredUser = service.registerUser(user.getEmail(), user.getPassword(), user.getSurname(), user.getName(), user.getPhone(), user.isRestaurateur());
-        return registeredUser == null ? "error_page" : "redirect:/login";
-    }
-
-    @PostMapping("/login")
-    public String login(@ModelAttribute User user, Model model){
-        System.out.println("login request:" + user);
-        User authenticated = service.authenticate(user.getEmail(), user.getPassword());
-        if(authenticated != null) {
-            model.addAttribute("userLogin", authenticated.getName());
-            return "personal_page";
-        }else {
-            return "error_page";
-        }
-    }
 }
+
+
