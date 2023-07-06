@@ -3,7 +3,6 @@ package com.yummmy.webapp.service;
 import com.yummmy.webapp.entity.User;
 import com.yummmy.webapp.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
 @Service

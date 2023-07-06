@@ -52,6 +52,7 @@ public class DishService {
         Dish existingDish=repository.findById(dish.getId()).orElse(null);
         existingDish.setName(dish.getName());
         existingDish.setPrice(dish.getPrice());
+        existingDish.setCategoryDish(dish.getCategoryDish());
         return repository.save(existingDish);
     }
 
