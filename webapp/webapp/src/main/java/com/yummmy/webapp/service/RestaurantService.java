@@ -56,8 +56,10 @@ public class RestaurantService {
         existingRestaurant.setCity(restaurant.getCity());
         existingRestaurant.setPhone(restaurant.getPhone());
         existingRestaurant.setDescription(restaurant.getDescription());
+        existingRestaurant.setType(restaurant.getType());
         existingRestaurant.setLogo(restaurant.getLogo());
         existingRestaurant.setImage(restaurant.getImage());
+        existingRestaurant.setDuration(restaurant.getDuration());
         return repository.save(existingRestaurant);
     }
 

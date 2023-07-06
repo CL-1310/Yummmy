@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -91,7 +91,7 @@
 
                             <article>
 
-                                <img src="/images/restaurants/bannieres/banniere_benvenuto.png" alt="Le Benvenuto" class="banners">
+                                <img th:src="@{${restaurant.image}}" th:alt="${restaurant.name}" class="banners" />
 
                                 <div class="card-info">
 
@@ -107,9 +107,9 @@
 
                                         </div>
 
-                                        <img src="/images/restaurants/logos/logo_benvenuto.png" alt="Logo Le Benvenuto">
+                                        <img th:src="@{${restaurant.logo}}" th:alt="${restaurant.name}">
 
-                                        <p><i class="bi bi-bag-check-fill"></i> 30-45 minutes</p>
+                                        <i class="bi bi-bag-check-fill"></i><p th:text="${restaurant.duration} +' '+'minutes'"></p>
 
                                     </div>
 
@@ -118,7 +118,7 @@
                                 <div class="card-name">
 
                                     <h3 th:text="${restaurant.name}"></h3>
-                                    <p>Restaurant italien</p>
+                                    <p th:text="'Restaurant' + ' '+ ${restaurant.type}"></p>
 
                                 </div>
 

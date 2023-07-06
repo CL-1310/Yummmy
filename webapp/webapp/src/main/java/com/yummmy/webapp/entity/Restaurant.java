@@ -27,8 +27,11 @@ public class Restaurant {
     private String city;
     private String phone;
     private String description;
+    private String type;
     private String logo;
     private String image;
+
+    private String duration;
 
     @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "id_type_restaurant", referencedColumnName = "id")

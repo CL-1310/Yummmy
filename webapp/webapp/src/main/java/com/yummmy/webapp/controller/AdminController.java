@@ -40,12 +40,14 @@ public class AdminController {
         return "pages/search";
     }
 
+    //Afficher la page d'un restaurant
+
     @GetMapping("/admin/restaurants/detail/{id}")
     public String detailRestaurants(@PathVariable("id") int id, Model model){
 
         model.addAttribute("restaurant", restaurantService.getRestaurantById(id));
         //${restaurant.getNom()}
-        return "pages/search";
+        return "pages/menu";
     }
 
     //Afficher la page d'ajout d'un restaurant
