@@ -84,11 +84,11 @@
 
             <div class="d-flex flex-wrap justify-content-center mt-5">
 
-                <a th:href="@{/admin/restaurants/detail/{id}(id=${listRest[1].id})}">
+                <a th:href="@{/admin/restaurants/detail/{id}(id=${listRest[3].id})}">
 
                     <article>
 
-                        <img th:src="@{${listRest[1].image}}" th:alt="${listRest[1].name}" class="banners" />
+                        <img th:src="@{${listRest[3].image}}" th:alt="${listRest[3].name}" class="banners" />
 
                         <div class="card-info">
 
@@ -104,10 +104,10 @@
 
                                 </div>
 
-                                <img th:src="@{${listRest[1].logo}}" th:alt="${listRest[1].name}">
+                                <img th:src="@{${listRest[3].logo}}" th:alt="${listRest[3].name}">
 
                                 <div class="duration d-flex">
-                                    <i class="bi bi-bag-check-fill"></i><p th:text="${listRest[1].duration} +' '+'minutes'"></p>
+                                    <i class="bi bi-bag-check-fill"></i><p th:text="${listRest[3].duration} +' '+'minutes'"></p>
                                 </div>
 
 
@@ -117,8 +117,48 @@
 
                         <div class="card-name">
 
-                            <h3 th:text="${listRest[1].name}"></h3>
-                            <p th:text="'Restaurant' + ' '+ ${listRest[1].type}"></p>
+                            <h3 th:text="${listRest[3].name}"></h3>
+                            <p th:text="'Restaurant' + ' '+ ${listRest[3].type}"></p>
+
+                        </div>
+
+                    </article>
+                </a>
+                <a th:href="@{/admin/restaurants/detail/{id}(id=${listRest[4].id})}">
+
+                    <article>
+
+                        <img th:src="@{${listRest[4].image}}" th:alt="${listRest[4].name}" class="banners" />
+
+                        <div class="card-info">
+
+                            <div class="d-flex justify-content-between">
+
+                                <div class="stars">
+
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+
+                                </div>
+
+                                <img th:src="@{${listRest[4].logo}}" th:alt="${listRest[4].name}">
+
+                                <div class="duration d-flex">
+                                    <i class="bi bi-bag-check-fill"></i><p th:text="${listRest[4].duration} +' '+'minutes'"></p>
+                                </div>
+
+
+                            </div>
+
+                        </div>
+
+                        <div class="card-name">
+
+                            <h3 th:text="${listRest[4].name}"></h3>
+                            <p th:text="'Restaurant' + ' '+ ${listRest[4].type}"></p>
 
                         </div>
 

@@ -157,10 +157,11 @@ color: #FD2D01;
 }
 
 .card-info img {
-    width: 7em;
+    width: 8em;
     margin-top: -3.5em;
     border: #FFBA08 solid 3px;
-    border-radius: 100px;
+    height: 8em;
+    border-radius: 50%;
 }
 
 .card-info {
@@ -336,7 +337,8 @@ h1 {
 }
 
 .menuCard .card-info img {
-    width: 12em;
+    width: 11em;
+    height: 11em;
     margin-top: -5em;
 }
 
