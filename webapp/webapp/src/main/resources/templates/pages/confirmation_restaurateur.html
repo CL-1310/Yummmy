@@ -18,29 +18,41 @@
 
         <nav class="navbar">
 
-            <a class="navbar-brand ms-5" href="/index.html">
+            <a class="navbar-brand ms-5" href="/">
                 <img src="/images/branding/logo.png" alt="logo Yummmy" width="150">
             </a>
 
             <div class="d-flex justify-content-end gap-5 me-5">
-                <a href="/index.html">Accueil</a>
+                <a href="/">Accueil</a>
+                <a href="/user/register">Inscription</a>
+                <a href="/user/login">Connexion</a>
                 <a href="/admin/restaurants">Restaurants</a>
-                <a href="/html/contact.html">Contact</a>
+                <a href="/admin/contact">Contact</a>
             </div>
-        
+
         </nav>
 
     </header>
 
-    <main>
+    <main class="confOrder-main">
 
-        <section>
+        <section class="menu-section">
 
-            <h1>Merci pour votre confiance !</h1>
-            <p>Les informations renseignées ont été transmises au service commercial, qui vous contactera dans les 24 heures pour finaliser votre dossier.</p>
-            <button>
-                <a href="/index.html">OK</a>
-            </button>
+            <article class="menuCard pt-2 d-flex justify-content-center">
+
+                <div class="menuContainer d-flex flex-column justify-content-center mt-2">
+
+                <h1>Merci pour votre confiance !</h1>
+                <p class="confOrder-title">Les informations renseignées ont été transmises au service commercial, qui vous contactera dans les 24 heures pour finaliser votre dossier.</p>
+                <div class="d-flex justify-content-center mt-4 mb-2">
+                    <button class="ps-4 pe-4">
+                        <a href="/">OK</a>
+                    </button>
+                </div>
+
+            </div>
+
+        </article>
 
         </section>
 
@@ -70,9 +82,9 @@
 
             <article class="d-flex flex-column">
 
-                <a href="#">Inscription</a>
-                <a href="#">Connexion</a>
-                <a href="#">Contact</a>
+                <a href="/user/register">Inscription</a>
+                <a href="/user/login">Connexion</a>
+                <a href="/admin/contact">Contact</a>
 
             </article>
 

@@ -481,6 +481,48 @@ h1 {
     width: 20%;
 }
 
+.confOrder-main {
+    text-align: center;
+    color: #FD2D01;
+    padding-top: 8em;
+}
+
+.confOrder-main .menuContainer {
+    width: 50%;
+}
+
+.confOrder-title {
+    font-weight: 600;
+    color: #FD2D01;
+    font-size: x-large;
+}
+
+.confOrder-number {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #FD2D01 1px solid;
+    background-color: #FD2D01;
+    width: 9em;
+    height: 3em;
+    border-radius: 5em;
+    padding-left: 1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    font-weight: bold;
+    color: white;
+    font-size: x-large;
+    margin: 0 auto;
+}
+
+.confOrder-note {
+    font-weight: 600;
+    color: #FD2D01;
+    font-size: medium;
+    font-style: italic;
+    padding-top: 1.5em;
+}
 
 .register-main {
     padding-top: 5em;
@@ -574,6 +616,52 @@ textarea:focus {
     font-style: italic;
     font-size: small;
     font-weight: bold;
+    color: #FD2D01;
+}
+
+.account-main {
+    text-align: center;
+}
+
+.account-main {
+    padding-top: 7em;
+}
+
+.account-main .menuContainer {
+    width: 36%;
+    padding: 1.5%;
+}
+
+.account-main p {
+    font-weight: 600;
+    font-size: large;
+}
+
+.restaurateur-main .register-section {
+    text-align: center;
+}
+
+.restaurateur-main {
+    padding-left: 27em;
+    padding-right: 27em;
+    padding-top: 10em;
+    padding-bottom: 10em;
+}
+
+.restaurateur-main h2 {
+    padding-top: 1em;
+    padding-bottom: 1.5em;
+    color: #FD2D01;
+}
+
+.restaurateur-info p {
+    color: white;
+    font-weight: 600;
+    font-size: large;
+    padding-bottom: 0.5em;
+}
+
+.restaurateur-main input[value] {
     color: #FD2D01;
 }
 

@@ -24,7 +24,7 @@
 
             <div class="d-flex justify-content-end gap-5 me-5">
                 <a href="/">Accueil</a>
-                <a href="/admin/account">Mon compte</a>
+                <a href="/user/login">Connexion</a>
                 <a href="/admin/restaurants">Restaurants</a>
                 <a href="/admin/contact">Contact</a>
             </div>
@@ -33,162 +33,165 @@
 
     </header>
 
-    <main>
+    <main class="restaurateur-main">
 
         <section>
 
-            <h1>Espace restaurateur</h1>
+            <div class="register-section">
+                <h1>Espace restaurateur</h1>
 
-            <article>
-    
-                <h2>Restaurant(s)</h2>
-    
-                <i class="bi bi-pencil-square"></i>
-    
-                <h4>Nom</h4>
-                <p th:text="${listRest[0].name}"></p>
-    
-                <h4>Adresse</h4>
-                <p th:text="${listRest[0].address}"></p>
-    
-                <h4>Code postal</h4>
-                <p th:text="${listRest[0].zipCode}"></p>
-    
-                <h4>Ville</h4>
-                <p th:text="${listRest[0].city}"></p>
+                <article class="restaurateur-info">
 
-                <h4>Mon restaurant est</h4>
-                <p th:text="${listRest[0].type}"></p>
-    
-            </article>
+                    <h2>Restaurant(s)</h2>
 
-            <article>
+                    <h4>Nom</h4>
+                    <p th:text="${listRest[0].name}"></p>
 
-                <h2>Menu</h2>
+                    <h4>Adresse</h4>
+                    <p th:text="${listRest[0].address}"></p>
 
-                <article>
-                    
-                    <h4>Ajouter un élément au menu <i class="bi bi-chevron-down"></i></h4>
-                    
-                    <form action="#" method="post">
+                    <h4>Code postal</h4>
+                    <p th:text="${listRest[0].zipCode}"></p>
 
-                        <p>
-                            <label for="type">Que souhaitez-vous ajouter ?</label><br>
-                            <select name="categoryDish" id="type" required>
-                                <option value="entree">Une entrée</option>
-                                <option value="course">Un plat</option>
-                                <option value="dessert">Un dessert</option>
-                                <option value="drink">Une boisson</option>
-                            </select>
-                        </p>
+                    <h4>Ville</h4>
+                    <p th:text="${listRest[0].city}"></p>
 
-                        <p>
-                            <label for="name">Saisissez l'intitulé</label>
-                            <input size="20" name="name" id="name" placeholder="Écrivez-ici..." required>
-                        </p>
+                    <h4>Mon restaurant est</h4>
+                    <p th:text="${listRest[0].type}"></p>
 
-                        <p>
-                            <label for="price">Saisissez le prix</label>
-                            <input size="20" name="price" id="price" placeholder="Écrivez-ici..." required>
-                        </p>
-
-                        <button type="submit">  Valider  </button>
-
-                    </form>
+                    <div class="d-flex justify-content-center mt-4 mb-2">
+                        <button>
+                            <a href="/">Modifier mes informations</a>
+                        </button>
+                    </div>
 
                 </article>
 
                 <article>
 
-                    <h4>Modifier un élément du menu <i class="bi bi-chevron-down"></i></h4>
+                    <h2>Menu</h2>
 
-                    <form action="#" method="put">
+                    <article>
 
-                        <p>
-                            <label for="dish">Que souhaitez-vous modifier ?</label><br>
-                            <select name="dish" id="dish" required>
-                                <option value="dish1">Bruschetta aux tomates et au basilic</option>
-                                <option value="dish2">Asperges à la milanaise</option>
-                                <option value="dish3">Antipasti de poivrons grillés</option>
-                                <option value="dish4">Gnocchi alla romana</option>
-                                <option value="dish5">Lasagnes à la bolognaise</option>
-                                <option value="dish6">Spaghettis à la carbonara</option>
-                                <option value="dish7">Pizza Margherita</option>
-                                <option value="dish8">Pizza 4 fromages</option>
-                                <option value="dish9">Escapalope à la milanaise</option>
-                                <option value="dish10">Cannelonnis à la sicilienne</option>
-                                <option value="dish11">Tiramisu</option>
-                                <option value="dish12">Panna Cotta</option>
-                                <option value="dish13">Cannoli</option>
-                                <option value="dish14">Côtes-du-Rhône 0,75L</option>
-                                <option value="dish15">Côtes-de-Provence 0,75L</option>
-                                <option value="dish16">Chianti 0,75L</option>
-                                <option value="dish17">Pinot blanc 0,75L</option>
-                                <option value="dish18">Pepsi 33cl</option>
-                                <option value="dish19">Ice Tea 33cl</option>
-                                <option value="dish20">Evian 50cl</option>
-                            </select>
-                        </p>
+                        <h4>Ajouter un élément au menu <i class="bi bi-chevron-down"></i></h4>
 
-                        <p>
-                            <label for="name">Saisissez l'intitulé</label>
-                            <input size="20" name="name" id="name" value="Bruschetta aux tomates et au basilic" placeholder="Écrivez-ici..." required>
-                        </p>
+                        <form action="#" method="post">
 
-                        <p>
-                            <label for="price">Saisissez le prix</label>
-                            <input size="20" name="price" id="price" value="8,90" placeholder="Écrivez-ici..." required>
-                        </p>
+                            <p>
+                                <label for="type">Que souhaitez-vous ajouter ?</label><br>
+                                <select name="categoryDish" id="type" required>
+                                    <option value="entree">Une entrée</option>
+                                    <option value="course">Un plat</option>
+                                    <option value="dessert">Un dessert</option>
+                                    <option value="drink">Une boisson</option>
+                                </select>
+                            </p>
 
-                        <p>
-                            <input type="submit" value="Valider">
-                        </p>
+                            <p>
+                                <label for="name">Saisissez l'intitulé</label>
+                                <input size="20" name="name" id="name" placeholder="Écrivez-ici..." required>
+                            </p>
 
-                    </form>
+                            <p>
+                                <label for="price">Saisissez le prix</label>
+                                <input size="20" name="price" id="price" placeholder="Écrivez-ici..." required>
+                            </p>
+
+                            <button type="submit">  Valider  </button>
+
+                        </form>
+
+                    </article>
+
+                    <article>
+
+                        <h4>Modifier un élément du menu <i class="bi bi-chevron-down"></i></h4>
+
+                        <form action="#" method="put">
+
+                            <p>
+                                <label for="dish">Que souhaitez-vous modifier ?</label><br>
+                                <select name="dish" id="dish" required>
+                                    <option value="dish1">Bruschetta aux tomates et au basilic</option>
+                                    <option value="dish2">Asperges à la milanaise</option>
+                                    <option value="dish3">Antipasti de poivrons grillés</option>
+                                    <option value="dish4">Gnocchi alla romana</option>
+                                    <option value="dish5">Lasagnes à la bolognaise</option>
+                                    <option value="dish6">Spaghettis à la carbonara</option>
+                                    <option value="dish7">Pizza Margherita</option>
+                                    <option value="dish8">Pizza 4 fromages</option>
+                                    <option value="dish9">Escapalope à la milanaise</option>
+                                    <option value="dish10">Cannelonnis à la sicilienne</option>
+                                    <option value="dish11">Tiramisu</option>
+                                    <option value="dish12">Panna Cotta</option>
+                                    <option value="dish13">Cannoli</option>
+                                    <option value="dish14">Côtes-du-Rhône 0,75L</option>
+                                    <option value="dish15">Côtes-de-Provence 0,75L</option>
+                                    <option value="dish16">Chianti 0,75L</option>
+                                    <option value="dish17">Pinot blanc 0,75L</option>
+                                    <option value="dish18">Pepsi 33cl</option>
+                                    <option value="dish19">Ice Tea 33cl</option>
+                                    <option value="dish20">Evian 50cl</option>
+                                </select>
+                            </p>
+
+                            <p>
+                                <label for="name">Saisissez l'intitulé</label>
+                                <input size="20" name="name" id="name" value="Bruschetta aux tomates et au basilic" placeholder="Écrivez-ici..." required>
+                            </p>
+
+                            <p>
+                                <label for="price">Saisissez le prix</label>
+                                <input size="20" name="price" id="price" value="8,90" placeholder="Écrivez-ici..." required>
+                            </p>
+
+                            <button type="submit">  Valider  </button>
+
+                        </form>
+
+                    </article>
+
+                    <article>
+
+                        <h4>Supprimer un élément du menu <i class="bi bi-chevron-down"></i></h4>
+
+                        <form action="#" method="delete">
+
+                            <p>
+                                <label for="dish">Que souhaitez-vous supprimer ?</label><br>
+                                <select name="dish" id="dish" required>
+                                    <option value="dish1">Bruschetta aux tomates et au basilic</option>
+                                    <option value="dish2">Asperges à la milanaise</option>
+                                    <option value="dish3">Antipasti de poivrons grillés</option>
+                                    <option value="dish4">Gnocchi alla romana</option>
+                                    <option value="dish5">Lasagnes à la bolognaise</option>
+                                    <option value="dish6">Spaghettis à la carbonara</option>
+                                    <option value="dish7">Pizza Margherita</option>
+                                    <option value="dish8">Pizza 4 fromages</option>
+                                    <option value="dish9">Escapalope à la milanaise</option>
+                                    <option value="dish10">Cannelonnis à la sicilienne</option>
+                                    <option value="dish11">Tiramisu</option>
+                                    <option value="dish12">Panna Cotta</option>
+                                    <option value="dish13">Cannoli</option>
+                                    <option value="dish14">Côtes-du-Rhône 0,75L</option>
+                                    <option value="dish15">Côtes-de-Provence 0,75L</option>
+                                    <option value="dish16">Chianti 0,75L</option>
+                                    <option value="dish17">Pinot blanc 0,75L</option>
+                                    <option value="dish18">Pepsi 33cl</option>
+                                    <option value="dish19">Ice Tea 33cl</option>
+                                    <option value="dish20">Evian 50cl</option>
+                                </select>
+                            </p>
+
+                            <button type="submit">  Valider  </button>
+
+                        </form>
+
+                    </article>
 
                 </article>
 
-                <article>
-
-                    <h4>Supprimer un élément du menu <i class="bi bi-chevron-down"></i></h4>
-                    
-                    <form action="#" method="delete">
-
-                        <p>
-                            <label for="dish">Que souhaitez-vous supprimer ?</label><br>
-                            <select name="dish" id="dish" required>
-                                <option value="dish1">Bruschetta aux tomates et au basilic</option>
-                                <option value="dish2">Asperges à la milanaise</option>
-                                <option value="dish3">Antipasti de poivrons grillés</option>
-                                <option value="dish4">Gnocchi alla romana</option>
-                                <option value="dish5">Lasagnes à la bolognaise</option>
-                                <option value="dish6">Spaghettis à la carbonara</option>
-                                <option value="dish7">Pizza Margherita</option>
-                                <option value="dish8">Pizza 4 fromages</option>
-                                <option value="dish9">Escapalope à la milanaise</option>
-                                <option value="dish10">Cannelonnis à la sicilienne</option>
-                                <option value="dish11">Tiramisu</option>
-                                <option value="dish12">Panna Cotta</option>
-                                <option value="dish13">Cannoli</option>
-                                <option value="dish14">Côtes-du-Rhône 0,75L</option>
-                                <option value="dish15">Côtes-de-Provence 0,75L</option>
-                                <option value="dish16">Chianti 0,75L</option>
-                                <option value="dish17">Pinot blanc 0,75L</option>
-                                <option value="dish18">Pepsi 33cl</option>
-                                <option value="dish19">Ice Tea 33cl</option>
-                                <option value="dish20">Evian 50cl</option>
-                            </select>
-                        </p>
-
-                        <p>
-                            <input type="submit" value="Valider">
-                        </p>
-                    
-                    </form>
-                    
-                </article>
-
-            </article>
+            </div>
 
         </section>
 
@@ -212,14 +215,15 @@
 
             </article>
 
+
         </section>
 
         <section class="d-flex gap-5">
 
             <article class="d-flex flex-column">
 
-                <a href="/admin/register">Inscription</a>
-                <a href="/admin/login">Connexion</a>
+                <a href="/user/register">Inscription</a>
+                <a href="/user/login">Connexion</a>
                 <a href="/admin/contact">Contact</a>
 
             </article>

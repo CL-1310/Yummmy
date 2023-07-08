@@ -24,6 +24,7 @@
 
             <div class="d-flex justify-content-end gap-5 me-5">
                 <a href="/">Accueil</a>
+                <a href="/admin/restaurants">Restaurants</a>
                 <a href="/admin/contact">Contact</a>
             </div>
         
@@ -31,37 +32,45 @@
 
     </header>
 
-    <main>
+    <main class="account-main">
 
-        <h1>Mon compte</h1>
+        <section class="menu-section">
 
-        <section>
+            <article class="menuCard d-flex justify-content-center">
 
-            <article>
+                <div class="menuContainer d-flex flex-column justify-content-center mt-2">
 
-                <h4>Nom</h4>
-                <p th:text="${surname}"></p>
+                    <h1>Mon compte</h1>
 
-                <h4>Prénom</h4>
-                <p th:text="${name}"></p>
+                    <article>
 
-                <h4>Email</h4>
-                <p th:text="${email}"></p>
+                        <h4>Nom</h4>
+                        <p th:text="${surname}"></p>
 
-                <h4>Téléphone</h4>
-                <p th:text="${phone}"></p>
+                        <h4>Prénom</h4>
+                        <p th:text="${name}"></p>
+
+                        <h4>Email</h4>
+                        <p th:text="${email}"></p>
+
+                        <h4>Téléphone</h4>
+                        <p th:text="${phone}"></p>
+
+                    </article>
+
+                    <div class="d-flex justify-content-center mt-4 mb-2">
+                        <button>Modifier mon compte</button>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4 mb-2">
+                        <button><a href="/">Déconnexion</a></button>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4 mb-3">
+                        <button><a href="/admin/espacerestaurateur">Espace restaurateur</a></button>
+                    </div>
+
+                </div>
 
             </article>
-
-            <article>
-
-                <button>Modifier mon compte</button>
-                <button><a href="/">Déconnexion</a></button>
-
-            </article>
-
-            <button><a href="/admin/espacerestaurateur">Espace restaurateur</a></button>
-
         </section>
 
     </main>

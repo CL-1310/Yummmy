@@ -71,8 +71,12 @@ public class AdminController {
     @PostMapping("/admin/restaurateur")
     public String postRestaurant(Restaurant restaurant){
         restaurantService.saveRestaurant(restaurant);
-        return "pages/restaurant_registration";
+        return "pages/confirmation_restaurateur";
     }
+
+    //Afficher la page de confirmation d'inscription
+    @GetMapping("/admin/restaurateur/confirmationinscription")
+    public String getConfirmationInscription(){ return "pages/confirmation_restaurateur";}
 
     //Afficher l'espace restaurateur
 
