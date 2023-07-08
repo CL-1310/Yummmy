@@ -35,7 +35,6 @@ public class AdminController {
 
     @GetMapping("/admin/restaurants")
     public String restaurants( Model model){
-
         model.addAttribute("listRest", restaurantService.getRestaurants());
         return "pages/search";
     }
@@ -44,9 +43,7 @@ public class AdminController {
 
     @GetMapping("/admin/restaurants/detail/{id}")
     public String detailRestaurants(@PathVariable("id") int id, Model model){
-
         model.addAttribute("restaurant", restaurantService.getRestaurantById(id));
-        //${restaurant.getNom()}
         return "pages/menu";
     }
 
@@ -94,22 +91,6 @@ public class AdminController {
 //        return "pages/restaurateur_area";
 //    }
 
-
-    //Afficher la page d'inscription
-
-    @GetMapping("/admin/register")
-    public String getRegister(){
-        return "pages/register";
-    }
-
-    //Ajouter un utilisateur
-
-    @PostMapping("/admin/register")
-    public String registerUser(User user) {
-        userService.saveUser(user);
-        return "pages/register";
-    }
-
     //Afficher la page de contact
 
     @GetMapping("/admin/contact")
@@ -125,17 +106,4 @@ public class AdminController {
         return "pages/contact";
     }
 
-    //Afficher la page login
-
-    @GetMapping("/admin/login")
-    public String getLogin(){
-        return "pages/login";
-    }
-
-    //Afficher la page compte
-
-    @GetMapping("/admin/account")
-    public String getAccount(){
-        return "pages/account";
-    }
 }

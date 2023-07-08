@@ -21,7 +21,7 @@ nav a:hover {
 }
 
 main {
-    background: url(/images/elements/Background.png)no-repeat fixed;
+    background: url(/images/elements/Background.png)fixed;
 }
 
 .heroSection h1 {
@@ -30,6 +30,7 @@ main {
     font-size: 3em;
     text-align: center;
     padding-bottom: 1em;
+    padding-top: 0em;
 }
 
 .heroSection img {
@@ -166,9 +167,9 @@ color: #FD2D01;
 }
 
 .card-info {
-    display: flex;
-    justify-content: space-around;
     padding-top: 0.5em;
+    padding-left: 0.3em;
+    padding-right: 0.3em;
 }
 
 .stars {
@@ -259,8 +260,8 @@ h1 {
     color: #FFBA08;
     text-align: center;
     font-weight: 900;
-    padding-top: 3em;
     padding-bottom: 0.5em;
+    padding-top: 3em;
 }
 
 #searchAddress {
@@ -293,6 +294,192 @@ h1 {
 
 .search-select{
     margin-left: 10em;
+}
+
+.search-select select:focus {
+    color: white;
+    outline: #FD2D01 0.5px solid;
+    font-weight:600;
+}
+
+
+.menuCard h1 {
+    color:#FD2D01;
+    font-weight: 900;
+    font-size: 40px;
+    margin-right: 0.5em;
+    padding-top: 1em;
+}
+
+.menuContainer {
+    display: block;
+    border: solid 1px #FFBA08;
+    background-color: #FFBA08;
+    border-radius: 20px;
+    width: 80%;
+    padding: 2.5%;
+    color: white;
+}
+
+.menuBanner {
+    width: 70em;
+    height: 25em;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+.menuCard {
+    padding-bottom: 10em;
+}
+
+.menuCard .card-info img {
+    width: 10em;
+    margin-top: -5em;
+}
+
+.menuCard .card-info i {
+    font-size: xx-large;
+}
+
+.menuCard .card-info p {
+    font-size: x-large;
+}
+
+.menuCard .card-name p {
+    margin-left: 5em;
+    margin-right: 3em;
+    font-weight: 600;
+    font-size: large;
+}
+
+.dishlist {
+    background-color: #FFBA08;
+    width: 80%;
+}
+
+.register-main {
+    padding-top: 5em;
+    padding-bottom: 5em;
+    text-align: center;
+    padding-left: 27em;
+    padding-right: 27em;
+}
+
+.register-section input {
+    padding-left:0.5em;
+    padding-right: 0.5em;
+    border-radius: 20px;
+    border: #FD2D01 2px solid;
+    font-weight:600;
+    text-align: center;
+    margin-bottom:0.5em;
+}
+
+select {
+    padding-left:0.5em;
+    padding-right: 0.5em;
+    border-radius: 20px;
+    border: #FD2D01 2px solid;
+    font-weight:600;
+    text-align: center;
+    color: #FD2D01;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+select:focus {
+    color: #FD2D01;
+    outline: #FD2D01 0.5px solid;
+    font-weight:600;
+}
+
+option {
+    font-weight:600;
+}
+
+textarea {
+    padding-left:1em;
+    padding-right: 1em;
+    padding-top: 0.5em;
+    border-radius: 20px;
+    border: #FD2D01 2px solid;
+    font-weight:600;
+    color: #FD2D01;
+    font-weight: 600;
+    margin-top: 1em;
+}
+
+textarea:focus {
+    color: #FD2D01;
+    outline: #FD2D01 0.5px solid;
+    font-weight:600;
+}
+
+
+.register-section input:focus {
+    color: #FD2D01;
+    outline: #FD2D01 0.5px solid;
+}
+
+.register-section label {
+    padding-right: 1em;
+    font-weight: 600;
+    font-size: large;
+    color: #FD2D01;
+}
+
+.register-section h1{
+    color: #FD2D01;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    font-weight: 700;
+}
+
+.register-section {
+    background-color: #FFBA08;
+    border-radius: 20px;
+}
+
+.register-section button {
+    margin-top: 1em;
+    margin-bottom:3em;
+}
+
+.note {
+    font-style: italic;
+    font-size: small;
+    font-weight: bold;
+    color: #FD2D01;
+}
+
+.contact-main {
+    padding-bottom: 10em;
+    text-align: center;
+}
+
+.contact-call {
+    background-color: #FFBA08;
+    margin-top: 3em;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 0em;
+    padding-right: 0em;
+}
+
+.contact-call h2 {
+    color: #FD2D01;
+    font-weight: 800;
+}
+
+.contact-call a {
+    font-size: x-large;
+}
+
+.contact-call p {
+    font-style: italic;
+    font-size: small;
+    font-weight: bold;
+    color: #FD2D01;
 }
 
 footer, footer a, h4{

@@ -11,12 +11,25 @@ public class UserService {
     @Autowired
     private UserRepository repository;
 
-
     //    AJOUTER UN UTILISATEUR
 
-    public User saveUser(User user) {
+    public User registerUser(String email, String password, String surname, String name, String phone, boolean restaurateur){
+        if(email == null && password == null){
+            return null;
+        }else{
+            User user = new User();
+            user.setEmail(email);
+            user.setPassword(password);
+            user.setSurname(surname);
+            user.setName(name);
+            user.setPhone(phone);
+            user.setRestaurateur(user.isRestaurateur());
+            return repository.save(user);
+        }
+    }
 
-        return repository.save(user);
+    public User authenticate(String email, String password){
+        return repository.findByEmailAndPassword(email, password).orElse(null);
     }
 
     //    OBTENIR UN UTILISATEUR PAR SON ID
