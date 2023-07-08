@@ -7,7 +7,7 @@
     <link rel="icon" href="/images/branding/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
-    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -23,8 +23,8 @@
 
         <div class="d-flex justify-content-end gap-5 me-5">
             <a href="/">Accueil</a>
-            <a href="/admin/register">Inscription</a>
-            <a href="/admin/login">Connexion</a>
+            <a href="/user/register">Inscription</a>
+            <a href="/user/login">Connexion</a>
             <a href="/admin/restaurants">Restaurants</a>
             <a href="/admin/contact">Contact</a>
         </div>
@@ -35,19 +35,19 @@
 
 <main>
 
-    <section>
+    <section class="menu-section">
 
-        <button class="mt-5 mb-5 ms-5"><a href="/admin/restaurants">Retour</a></button>
+        <button class="mt-5 mb-4 ms-5"><a href="/admin/restaurants">Retour</a></button>
 
-        <article class="menuCard pt-2 d-flex justify-content-center">
+        <article class="menuCard pt-2 d-flex flex-wrap justify-content-center">
 
-            <div class="menuContainer d-flex justify-content-center mt-2">
+            <div class="menuContainer d-flex flex-wrap justify-content-center mt-2">
 
                 <article>
 
                     <img th:src="@{${restaurant.image}}" th:alt="${restaurant.name}"class="menuBanner">
 
-                    <div class="card-info d-flex justify-content-between">
+                    <div class="card-info d-flex justify-content-between pe-5 ps-5 me-5 ms-5">
 
                         <div class="stars">
 
@@ -61,18 +61,200 @@
 
                         <img th:src="@{${restaurant.logo}}" th:alt="${restaurant.name}">
 
-                        <i class="bi bi-bag-check-fill"></i><p th:text="${restaurant.duration} +' '+'minutes'"></p>
+                        <div class="duration d-flex align-items-baseline">
+
+                            <i class="bi bi-bag-check-fill"></i><p th:text="${restaurant.duration} +' '+'minutes'"></p>
+
+                        </div>
+
 
                     </div>
 
                     <div class="card-name">
 
-                        <h3 th:text="${restaurant.name}"></h3>
-                        <p th:text="'Restaurant' + ' '+ ${restaurant.type}"></p>
-                        <p th:text="${restaurant.description}"></p>
+                        <h1 th:text="${restaurant.name}"></h1>
+                        <p class="restaurant-type" th:text="'Restaurant' + ' '+ ${restaurant.type}"></p>
+                        <p class="restaurant-description" th:text="${restaurant.description}"></p>
 
                     </div>
 
+                </article>
+                <article class="dishlist">
+
+                    <form action="">
+
+                        <article class="entrees">
+
+                            <h2>Entrées</h2>
+
+                            <article class="d-flex">
+
+                                <p class="dish-name">Bruschetta aux tomates et au basilic</p>
+                                <p class="price">8,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>1</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Antipasti de poivrons grillés</p>
+                                <p class="price">8,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Asperges à la milanaise</p>
+                                <p class="price">10,50€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+
+                        </article>
+                        <article class="courses">
+
+                            <h2>Plats</h2>
+
+                            <article class="d-flex">
+
+                                <p class="dish-name">Pizza 4 fromages</p>
+                                <p class="price">11,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Pizza Margherita</p>
+                                <p class="price">11,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Lasagnes à la bolognaise</p>
+                                <p class="price">12,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Spaghettis à la carbonara</p>
+                                <p class="price">12,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Gnocchi alla romana</p>
+                                <p class="price">13,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Cannelonnis à la sicilienne</p>
+                                <p class="price">14,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>2</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Escapalope à la milanaise</p>
+                                <p class="price">14,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+
+                        </article>
+                        <article class="desserts">
+
+                            <h2>Desserts</h2>
+
+                            <article class="d-flex">
+
+                                <p class="dish-name">Tiramisu</p>
+                                <p class="price">4,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>2</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Cannoli</p>
+                                <p class="price">5,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Panna Cotta</p>
+                                <p class="price">5,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+
+                        </article>
+                        <article class="drinks">
+
+                            <h2>Boissons</h2>
+
+                            <article class="d-flex">
+
+                                <p class="dish-name">Evian 50cl</p>
+                                <p class="price">1,50€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>1</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Pepsi 33cl</p>
+                                <p class="price">2,00€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Ice Tea 33cl</p>
+                                <p class="price">2,00€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>1</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Côtes-du-Rhône 0,75L</p>
+                                <p class="price">14,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Côtes-de-Provence 0,75L</p>
+                                <p class="price">15,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Chianti 0,75L</p>
+                                <p class="price">16,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+                            <article class="d-flex">
+
+                                <p class="dish-name">Pinot blanc 0,75L</p>
+                                <p class="price">17,90€</p>
+                                <p class="quantity"><i class="bi bi-plus"></i><span>0</span><i class="bi bi-dash"></i></p>
+
+                            </article>
+
+                        </article>
+
+                        <div class="d-flex justify-content-center mt-4 mb-2">
+
+                            <button><a th:href="@{/admin/restaurants/detail/{id}/cart(id=${restaurant.id})}">Commander</a></button>
+
+                        </div>
+
+                    </form>
                 </article>
 
             </div>
@@ -80,194 +262,8 @@
         </article>
 
     </section>
-    <section>
-
-        <article>
-
-            <form action="">
-
-                <article class="dishlist">
-
-                    <h2>Entrées</h2>
-
-                    <article class="d-flex justify-content-around">
-
-                        <p>Bruschetta aux tomates et au basilic</p>
-                        <p>8,90€</p>
-                        <p class="quantity d-flex justify-content-between"><i class="bi bi-plus"></i>1<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Antipasti de poivrons grillés</p>
-                        <p>8,90€</p>
-                        <p class="quantity d-flex justify-content-between"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Asperges à la milanaise</p>
-                        <p>10,50€</p>
-                        <p class="quantity d-flex justify-content-between"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-
-                </article>
-                <article>
-
-                    <h2>Plats</h2>
-
-                    <article class="d-flex justify-content-around">
-
-                        <p>Pizza 4 fromages</p>
-                        <p>11,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Pizza Margherita</p>
-                        <p>11,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Lasagnes à la bolognaise</p>
-                        <p>12,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Spaghettis à la carbonara</p>
-                        <p>12,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Gnocchi alla romana</p>
-                        <p>13,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Cannelonnis à la sicilienne</p>
-                        <p>14,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>2<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Escapalope à la milanaise</p>
-                        <p>14,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-
-                </article>
-                <article>
-
-                    <h2>Desserts</h2>
-
-                    <article class="d-flex justify-content-around">
-
-                        <p>Tiramisu</p>
-                        <p>4,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>2<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Cannoli</p>
-                        <p>5,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Panna Cotta</p>
-                        <p>5,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-
-                </article>
-                <article>
-
-                    <h2>Boissons</h2>
-
-                    <article class="d-flex justify-content-around">
-
-                        <p>Evian 50cl</p>
-                        <p>1,50€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>1<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Pepsi 33cl</p>
-                        <p>2,00€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Ice Tea 33cl</p>
-                        <p>2,00€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>1<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Côtes-du-Rhône 0,75L</p>
-                        <p>14,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Côtes-de-Provence 0,75L</p>
-                        <p>15,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Chianti 0,75L</p>
-                        <p>16,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-                    <article class="d-flex justify-content-around">
-
-                        <p>Pinot blanc 0,75L</p>
-                        <p>17,90€</p>
-                        <p class="quantity d-flex"><i class="bi bi-plus"></i>0<i class="bi bi-dash"></i></p>
-
-                    </article>
-
-                </article>
-
-                <div class="d-flex justify-content-center mt-2">
-
-                    <button><a href="/front/html/cart.html">Commander</a></button>
-
-                </div>
-
-            </form>
-        </article>
-
-    </section>
-
 
 </main>
-
-</main>
-
-
 
 
 <footer class="d-flex p-5 justify-content-between align-items-center">
@@ -294,8 +290,8 @@
 
         <article class="d-flex flex-column">
 
-            <a href="/admin/register">Inscription</a>
-            <a href="/admin/login">Connexion</a>
+            <a href="/user/register">Inscription</a>
+            <a href="/user/login">Connexion</a>
             <a href="/admin/contact">Contact</a>
 
         </article>

@@ -21,7 +21,7 @@ nav a:hover {
 }
 
 main {
-    background: url(/images/elements/Background.png)fixed;
+    background: url(../images/elements/Background.png)fixed;
 }
 
 .heroSection h1 {
@@ -140,16 +140,13 @@ color: #FD2D01;
     color: white;
     margin-left: 2em;
     margin-right: 2em;
+    margin-bottom: 5em;
 }
 
 .selectionCards a:hover {
     transform:scale(1.04);
     text-size-adjust: auto;
     transition: 0.3s;
-}
-
-.selectionCards div {
-    gap: 3em;
 }
 
 .banners {
@@ -168,8 +165,12 @@ color: #FD2D01;
 
 .card-info {
     padding-top: 0.5em;
-    padding-left: 0.3em;
-    padding-right: 0.3em;
+    padding-right: 1em;
+    padding-left: 1em;
+}
+
+.bi-bag-check-fill {
+    padding-right: 0.5em;
 }
 
 .stars {
@@ -302,12 +303,14 @@ h1 {
     font-weight:600;
 }
 
+.menu-section button a{
+    font-size: large;
+}
 
 .menuCard h1 {
     color:#FD2D01;
     font-weight: 900;
     font-size: 40px;
-    margin-right: 0.5em;
     padding-top: 1em;
 }
 
@@ -323,7 +326,7 @@ h1 {
 
 .menuBanner {
     width: 70em;
-    height: 25em;
+    height: 23em;
     border-radius: 20px;
     object-fit: cover;
 }
@@ -333,7 +336,7 @@ h1 {
 }
 
 .menuCard .card-info img {
-    width: 10em;
+    width: 12em;
     margin-top: -5em;
 }
 
@@ -343,19 +346,141 @@ h1 {
 
 .menuCard .card-info p {
     font-size: x-large;
+    color: #FD2D01;
+    font-weight: 600;
+    font-style: italic;
 }
 
-.menuCard .card-name p {
-    margin-left: 5em;
-    margin-right: 3em;
-    font-weight: 600;
+.menuCard .card-info i {
+    color:#FD2D01;
+}
+
+.restaurant-type {
+    margin-bottom: 1em;
+    font-weight: 700;
+    font-size: x-large;
+    color: white;
+}
+
+.restaurant-description {
+    font-weight: normal;
     font-size: large;
+    font-style: italic;
+    padding-left: 5em;
+    padding-right: 5em;
+    margin-bottom: 1.5em;
+}
+
+.menuCard .card-name h1 {
+    text-align: center;
+    margin-right: 0em;
+    font-weight: 800;
+    font-size: 45px;
 }
 
 .dishlist {
-    background-color: #FFBA08;
-    width: 80%;
+    width: 90%;
 }
+
+.dishlist h2 {
+    color: #FD2D01;
+    text-align: left;
+    border-bottom: 4px solid #FD2D01;
+    margin-bottom: 1.5em;
+    margin-top: 1.5em;
+    width: 17%;
+}
+
+.dish-name {
+    font-size: larger;
+    width: 72%
+}
+
+.price {
+    font-size: larger;
+    width: 20%;
+}
+
+.quantity {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: larger;
+    width: 7%;
+}
+
+.quantity span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: #FD2D01 1px solid;
+    background-color: #FD2D01;
+    width: 5.5em;
+    height: 2.5em;
+    margin-top: -0.5em;
+}
+
+.quantity i {
+    margin-right: -2em;
+    margin-left: -2em;
+    margin-top: -0.5em;
+}
+
+.cart-main .menuContainer {
+    width: 52%;
+}
+
+.cart-main .dishlist i {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: #FD2D01 1px solid;
+    background-color: #FD2D01;
+    width: 2.5em;
+    height: 2.5em;
+    z-index: 1;
+}
+
+.cart-main .dishlist i:hover {
+    cursor: pointer;
+}
+
+.cart-main span {
+    width: 4em;
+    height: 2.5em;
+}
+
+.cart-info h2{
+    color: #FD2D01;
+}
+
+.duration-cart p{
+    font-weight: 600;
+    font-style: italic;
+}
+
+.duration-cart {
+    font-size: larger;
+    color: #FD2D01;
+    margin-bottom: 2em;
+}
+
+.total {
+    border-top: 2px solid white;
+    padding-top: 1em;
+    font-weight: 500;
+    font-size: larger;
+}
+
+.total-title {
+    width: 72%;
+}
+
+.total-price {
+    width: 20%;
+}
+
 
 .register-main {
     padding-top: 5em;

@@ -66,10 +66,5 @@ public class UserController {
         return "pages/account";
     }
 
-//    @GetMapping("/user/account/detail/{id}")
-//    public String detailUser(@PathVariable("id") int id, Model model, User user){
-//        User authenticated = userService.getUserById(id);
-//        model.addAttribute("user", authenticated.getId());
-//        return "pages/account";
-//    }
 }
+

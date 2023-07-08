@@ -47,6 +47,19 @@ public class AdminController {
         return "pages/menu";
     }
 
+    //Afficher le panier
+
+    @GetMapping("/admin/restaurants/detail/{id}/cart")
+    public String getCart(@PathVariable("id") int id, Model model){
+        model.addAttribute("restaurant", restaurantService.getRestaurantById(id));
+        return "pages/cart";
+    }
+
+    //Afficher la page de confirmation de commande
+
+    @GetMapping("/admin/restaurant/confirmationorder")
+    public String getConfirmationOrder(){ return "pages/confirmation_order";}
+
     //Afficher la page d'ajout d'un restaurant
 
     @GetMapping("/admin/restaurateur")
@@ -64,8 +77,9 @@ public class AdminController {
     //Afficher l'espace restaurateur
 
     @GetMapping("/admin/espacerestaurateur")
-    public String restaurateurArea(){ return "pages/restaurateur_area";}
-
+    public String restaurateurArea(Model model){
+        model.addAttribute("listRest", restaurantService.getRestaurants());
+        return "pages/restaurateur_area";}
 
     //Ajouter un plat
 

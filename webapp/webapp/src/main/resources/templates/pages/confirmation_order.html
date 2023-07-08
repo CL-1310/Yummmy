@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Confirmation - Yummmy</title>
+    <title>Biggie's Burgers - Yummmy</title>
     <link rel="icon" href="/images/branding/icon.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -13,21 +13,23 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    
+
     <header>
 
         <nav class="navbar">
 
-            <a class="navbar-brand ms-5" href="/index.html">
+            <a class="navbar-brand ms-5" href="/">
                 <img src="/images/branding/logo.png" alt="logo Yummmy" width="150">
             </a>
 
             <div class="d-flex justify-content-end gap-5 me-5">
-                <a href="/index.html">Accueil</a>
+                <a href="/">Accueil</a>
+                <a href="/user/register">Inscription</a>
+                <a href="/user/login">Connexion</a>
                 <a href="/admin/restaurants">Restaurants</a>
-                <a href="/html/contact.html">Contact</a>
+                <a href="/admin/contact">Contact</a>
             </div>
-        
+
         </nav>
 
     </header>
@@ -36,11 +38,11 @@
 
         <section>
 
-            <h1>Merci pour votre confiance !</h1>
-            <p>Les informations renseignées ont été transmises au service commercial, qui vous contactera dans les 24 heures pour finaliser votre dossier.</p>
-            <button>
-                <a href="/index.html">OK</a>
-            </button>
+            <h1>Merci pour votre commande !</h1>
+
+            <p>Votre numéro de commande est le</p>
+            <p>YUM-BE012</p>
+            <p>Le restaurant vous enverra un sms dès que votre commande sera prête</p>
 
         </section>
 
@@ -70,9 +72,9 @@
 
             <article class="d-flex flex-column">
 
-                <a href="#">Inscription</a>
-                <a href="#">Connexion</a>
-                <a href="#">Contact</a>
+                <a href="/user/register">Inscription</a>
+                <a href="/user/login">Connexion</a>
+                <a href="/admin/contact">Contact</a>
 
             </article>
 
@@ -87,6 +89,6 @@
         </section>
 
     </footer>
-
+    
 </body>
 </html>
