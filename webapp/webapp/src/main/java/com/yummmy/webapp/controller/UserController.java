@@ -33,7 +33,7 @@ public class UserController {
     @PostMapping("/user/register")
     public String registerUser(@ModelAttribute User user) {
         User registeredUser = userService.registerUser(user.getEmail(), user.getPassword(), user.getSurname(), user.getName(), user.getPhone(), user.isRestaurateur());
-        return registeredUser == null ? "error_page" : "redirect:/account";
+        return registeredUser == null ? "error_page" : "redirect:/user/login";
     }
 
     //Afficher la page login
